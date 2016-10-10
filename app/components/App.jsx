@@ -5,15 +5,13 @@ var App = React.createClass({
     render: function() {
        return(
                <div>
+                 <h1>App  Component</h1>
                  <ul role="nav">
-                   <li>
-                     <Link to="/about">About</Link>
-                   </li>
-                   <li>
-                     <Link to="/main">Main</Link>
-                   </li>
+                   <li><Link to="/about">About</Link></li>
+                   <li><Link to="/main">Main</Link></li>
                  </ul>
-                <p>App  Component</p>
+                {/*Render children as prescribed in router*/}
+                {this.props.children}
                </div>
              );
     }
