@@ -9,9 +9,10 @@ render((
   <Router history={hashHistory}>
     <Route path="/" component={App}>
       <Route path="/main" component={Main}/>
-      <Route path="/about" component={About}/>
-      {/*route with params*/}
-      <Route path="/about/:userName/:repoName" component={Repo}></Route>
+      <Route path="/about" component={About}>
+        {/*route with params*/}
+        <Route path="/about/:userName/:repoName" component={Repo}></Route>
+      </Route>
     </Route>
   </Router>
 ), document.getElementById('app'))

@@ -1,14 +1,15 @@
 import React from 'react';
-import {Link} from 'react-router'
+import NavLink from 'NavLink';
 export default React.createClass({
     render: function() {
        return(
                <div>
                 <p>About  Component</p>
                 <ul>
-                  <li><Link to="/about/reactjs/react-router">React Router</Link></li>
-                  <li><Link to="/about/facebook/react"> React</Link></li>
+                  <li><NavLink to="/about/reactjs/react-router">React Router</NavLink></li>
+                  <li><NavLink to="/about/facebook/react"> React</NavLink></li>
                 </ul>
+                {this.props.children}
                </div>
              );
     }
